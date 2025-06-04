@@ -1,7 +1,7 @@
 # YShield: AI-Driven Autonomous Security Defense System
 
-![README中文版](README-zh.md) %% Placeholder for a future logo
-
+**[README中文版](README-zh.md)**
+ 
 ## Project Introduction
 
 `YShield` (pronounced "Yu Zhi" in Chinese, meaning "Foreknowledge" or "Pre-cognition") is an innovative, AI-driven autonomous security defense system designed to provide enterprises with a next-generation, closed-loop security posture. Moving beyond traditional rule-based and human-centric security operations, `yshield` leverages advanced Artificial Intelligence, Machine Learning, and Big Data technologies to achieve autonomous learning, autonomous decision-making, and autonomous response capabilities. Its core mission is to enable proactive threat prediction, automated remediation, and continuous evolution, ensuring a "prescient and tireless" defense against modern cyber threats.

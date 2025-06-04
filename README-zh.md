@@ -1,6 +1,6 @@
 # yshield: 御知自主安全防御系统
 
-![README English](README.md) %% Placeholder for a future logo
+**[README English](README.md)**
 
 ## 项目简介
 

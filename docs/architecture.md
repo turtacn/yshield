@@ -38,7 +38,7 @@
 以下架构图展示了 `yshield` 的主要组件、层次关系以及数据流向。
 
 ```mermaid
-graph TD
+graph LR
     %% Legend
     %% 模块命名规则: 大写缩写[中文名称（English Term）]
     %% 节点命名规则: 类型缩写_名称[中文名称（English Name）]
@@ -203,7 +203,7 @@ graph TD
 `yshield` 系统将采用云原生（Cloud Native）的部署方式，基于 Kubernetes \[38] 进行容器化部署与管理，以实现弹性伸缩、高可用性和资源高效利用。
 
 ```mermaid
-graph TD
+graph LR
     %% Legend
     %% 模块命名规则: 大写缩写[中文名称（English Term）]
     %% 节点命名规则: 类型缩写_名称[中文名称（English Name）]
@@ -228,7 +228,7 @@ graph TD
     end
 
     subgraph Kubernetes_Cluster[Kubernetes 集群（Kubernetes Cluster）]
-        direction TD
+        direction LR
 
         subgraph K_Data_Ingestion[数据摄取（Data Ingestion）]
             K_NTA_Collector
@@ -619,41 +619,41 @@ yshield/
 
 ## 5. 参考资料
 
-\[1] OpenSOC. GitHub Repository. `https://github.com/OpenSOC/OpenSOC`
-\[2] Wazuh. GitHub Repository. `https://github.com/wazuh/wazuh`
-\[3] Apache Metron. GitHub Repository. `https://github.com/apache/metron`
-\[4] Apache Spot (原 Open Network Insight). GitHub Repository. `https://github.com/apache/spot`
-\[5] Elasticsearch. GitHub Repository. `https://github.com/elastic/elasticsearch`
-\[6] Shuffle. GitHub Repository. `https://github.com/frikky/Shuffle`
-\[7] StackStorm. GitHub Repository. `https://www.github.com/StackStorm/st2`
-\[8] TheHive + Cortex. GitHub Repository. `https://github.com/TheHive-Project/TheHive`
-\[9] MISP (Malware Information Sharing Platform). GitHub Repository. `https://github.com/MISP/MISP`
-\[10] ATT\&CK Navigator. GitHub Repository. `https://github.com/mitre-attack/attack-navigator`
-\[11] Neo4j Security Knowledge Graph Samples. GitHub Repository. `https://github.com/neo4j-contrib/samples-security`
-\[12] OpenTelemetry. Official Website. `https://opentelemetry.io/`
-\[13] Apache Flink. Official Website. `https://flink.apache.org/`
-\[14] Clean Code by Robert C. Martin. Book.
-\[15] Suricata. Official Website. `https://suricata.io/`
-\[16] Zeek. Official Website. `https://zeek.org/`
-\[17] osquery. Official Website. `https://osquery.io/`
-\[18] VirusTotal. Official Website. `https://www.virustotal.com/`
-\[19] CISA (Cybersecurity & Infrastructure Security Agency). Official Website. `https://www.cisa.gov/`
-\[20] Elastic Common Schema (ECS). Official Documentation. `https://www.elastic.co/guide/en/ecs/current/ecs-reference.html`
-\[21] Common Event Format (CEF) by ArcSight. Documentation. `https://www.microfocus.com/media/doc/arcsight-cef-guide/cef_whitepaper.pdf`
-\[22] Apache Kafka. Official Website. `https://kafka.apache.org/`
-\[23] Elasticsearch. Official Website. `https://www.elastic.co/elasticsearch/`
-\[24] ClickHouse. Official Website. `https://clickhouse.com/`
-\[25] SecML. GitHub Repository. `https://github.com/pralab/SecML`
-\[26] Adversarial Robustness Toolbox (ART). GitHub Repository. `https://github.com/Trusted-AI/adversarial-robustness-toolbox`
-\[27] MITRE ATT\&CK. Official Website. `https://attack.mitre.org/`
-\[28] Drools. Official Website. `https://www.drools.org/`
-\[29] SOAR Playbook. General Concept in Cybersecurity.
-\[30] Neo4j. Official Website. `https://neo4j.com/`
-\[31] JanusGraph. Official Website. `http://janusgraph.org/`
-\[32] CVE Database. Official Website. `https://cve.mitre.org/`
-\[33] Grafana. Official Website. `https://grafana.com/`
-\[34] Kibana. Official Website. `https://www.elastic.co/kibana/`
-\[35] PCI DSS (Payment Card Industry Data Security Standard). Official Website. `https://www.pcisecuritystandards.org/`
-\[36] HIPAA (Health Insurance Portability and Accountability Act). Official Website. `https://www.cdc.gov/phlp/publications/overview/hipaa.html`
-\[37] 等级保护 2.0 (Cybersecurity Classified Protection 2.0). Chinese National Standard.
-\[38] Kubernetes. Official Website. `https://kubernetes.io/`
+- \[1] OpenSOC. GitHub Repository. `https://github.com/OpenSOC/OpenSOC`
+- \[2] Wazuh. GitHub Repository. `https://github.com/wazuh/wazuh`
+- \[3] Apache Metron. GitHub Repository. `https://github.com/apache/metron`
+- \[4] Apache Spot (原 Open Network Insight). GitHub Repository. `https://github.com/apache/spot`
+- \[5] Elasticsearch. GitHub Repository. `https://github.com/elastic/elasticsearch`
+- \[6] Shuffle. GitHub Repository. `https://github.com/frikky/Shuffle`
+- \[7] StackStorm. GitHub Repository. `https://www.github.com/StackStorm/st2`
+- \[8] TheHive + Cortex. GitHub Repository. `https://github.com/TheHive-Project/TheHive`
+- \[9] MISP (Malware Information Sharing Platform). GitHub Repository. `https://github.com/MISP/MISP`
+- \[10] ATT\&CK Navigator. GitHub Repository. `https://github.com/mitre-attack/attack-navigator`
+- \[11] Neo4j Security Knowledge Graph Samples. GitHub Repository. `https://github.com/neo4j-contrib/samples-security`
+- \[12] OpenTelemetry. Official Website. `https://opentelemetry.io/`
+- \[13] Apache Flink. Official Website. `https://flink.apache.org/`
+- \[14] Clean Code by Robert C. Martin. Book.
+- \[15] Suricata. Official Website. `https://suricata.io/`
+- \[16] Zeek. Official Website. `https://zeek.org/`
+- \[17] osquery. Official Website. `https://osquery.io/`
+- \[18] VirusTotal. Official Website. `https://www.virustotal.com/`
+- \[19] CISA (Cybersecurity & Infrastructure Security Agency). Official Website. `https://www.cisa.gov/`
+- \[20] Elastic Common Schema (ECS). Official Documentation. `https://www.elastic.co/guide/en/ecs/current/ecs-reference.html`
+- \[21] Common Event Format (CEF) by ArcSight. Documentation. `https://www.microfocus.com/media/doc/arcsight-cef-guide/cef_whitepaper.pdf`
+- \[22] Apache Kafka. Official Website. `https://kafka.apache.org/`
+- \[23] Elasticsearch. Official Website. `https://www.elastic.co/elasticsearch/`
+- \[24] ClickHouse. Official Website. `https://clickhouse.com/`
+- \[25] SecML. GitHub Repository. `https://github.com/pralab/SecML`
+- \[26] Adversarial Robustness Toolbox (ART). GitHub Repository. `https://github.com/Trusted-AI/adversarial-robustness-toolbox`
+- \[27] MITRE ATT\&CK. Official Website. `https://attack.mitre.org/`
+- \[28] Drools. Official Website. `https://www.drools.org/`
+- \[29] SOAR Playbook. General Concept in Cybersecurity.
+- \[30] Neo4j. Official Website. `https://neo4j.com/`
+- \[31] JanusGraph. Official Website. `http://janusgraph.org/`
+- \[32] CVE Database. Official Website. `https://cve.mitre.org/`
+- \[33] Grafana. Official Website. `https://grafana.com/`
+- \[34] Kibana. Official Website. `https://www.elastic.co/kibana/`
+- \[35] PCI DSS (Payment Card Industry Data Security Standard). Official Website. `https://www.pcisecuritystandards.org/`
+- \[36] HIPAA (Health Insurance Portability and Accountability Act). Official Website. `https://www.cdc.gov/phlp/publications/overview/hipaa.html`
+- \[37] 等级保护 2.0 (Cybersecurity Classified Protection 2.0). Chinese National Standard.
+- \[38] Kubernetes. Official Website. `https://kubernetes.io/`
