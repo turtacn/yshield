@@ -40,7 +40,7 @@ Traditional security solutions often fall short in the face of increasingly soph
 
 ## Architecture Overview
 
-`yshield` adopts a layered, modular architecture, integrating cutting-edge AI and Big Data technologies. A detailed architectural diagram and explanation can be found in `docs/architecture.md`.
+`yshield` adopts a layered, modular architecture, integrating cutting-edge AI and Big Data technologies. A detailed architectural diagram and explanation can be found in **[architecture design](docs/architecture.md)**.
 
 ## Build and Run Guide (WIP - Work In Progress)
 
