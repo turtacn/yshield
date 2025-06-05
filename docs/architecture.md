@@ -376,35 +376,23 @@ graph LR
 
 ```mermaid
 sequenceDiagram
-    %% Mermaid 图表详细格式规范：
-    %% 模块命名规则: 大写缩写[中文名称（English Term）]
-    %% 节点命名规则: 类型缩写_名称[中文名称（English Name）]
-    %% 括号统一使用全角符号（即“（”和“）”）
-    %% 模块颜色：#D8BFD8
-    participant DC[数据采集层（Data Collection Layer）]
-    participant DP[数据处理层（Data Processing Layer）]
-    participant AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]
-    participant RD_RR[响应与处置层（Response & Remediation Layer）]
-    participant EF_EL[演进与反馈层（Evolution & Feedback Layer）]
-    participant UM_MP[展现与管理层（UI & Management Layer）]
-    participant ES_OT[外部系统（External System）]
 
     %% 业务流序号
-    DC->>DP: 1. 采集并发送原始数据（Raw Data）
-    DP->>AI_AD: 2. 清洗、归一化数据（Normalized Data）
-    AI_AD->>AI_AD: 3. （并行）异常检测（Anomaly Detection）、UEBA分析（UEBA Analysis）、CTEM评估（CTEM Evaluation）
-    AI_AD->>AI_AD: 4. 融合分析结果（Fused Analysis Results）
-    AI_AD->>EF_EL: 5. （查询）安全知识图谱（Security Knowledge Graph）
-    EF_EL-->>AI_AD: 6. 返回上下文信息/决策依据（Context/Decision Basis）
-    AI_AD->>AI_AD: 7. 自主决策（Autonomous Decision）
-    AI_AD->>RD_RR: 8. 下发响应指令（Response Command）
-    RD_RR->>ES_OT: 9. 执行自动化处置（Execute Automated Remediation）
-    ES_OT-->>RD_RR: 10. 返回处置结果（Remediation Result）
-    RD_RR->>EF_EL: 11. 上报处置结果（Report Remediation Result）
-    EF_EL->>EF_EL: 12. 更新知识图谱/反馈学习（Update KG/Feedback Learning）
-    EF_EL->>AI_AD: 13. 模型/策略迭代优化（Model/Policy Optimization）
-    RD_RR->>UM_MP: 14. 生成告警/通知（Generate Alert/Notification）
-    UM_MP->>ES_OT: 15. （通知）安全运营团队（Notify SOC Team）
+    DC[数据采集层（Data Collection Layer）]->>DP[数据处理层（Data Processing Layer）]: 1.采集并发送原始数据（Raw Data）
+    DP[数据处理层（Data Processing Layer）]->>AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]: 2.清洗、归一化数据（Normalized Data）
+    AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]->>AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]: 3.（并行）异常检测（Anomaly Detection）、UEBA分析（UEBA Analysis）、CTEM评估（CTEM Evaluation）
+    AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]->>AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]: 4.融合分析结果（Fused Analysis Results）
+    AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]->>EF_EL[演进与反馈层（Evolution & Feedback Layer）]: 5.（查询）安全知识图谱（Security Knowledge Graph）
+    EF_EL[演进与反馈层（Evolution & Feedback Layer）]-->>AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]: 6.返回上下文信息/决策依据（Context/Decision Basis）
+    AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]->>AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]: 7.自主决策（Autonomous Decision）
+    AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]->>RD_RR[响应与处置层（Response & Remediation Layer）]: 8.下发响应指令（Response Command）
+    RD_RR[响应与处置层（Response & Remediation Layer）]->>ES_OT[外部系统（External System）]: 9.执行自动化处置（Execute Automated Remediation）
+    ES_OT[外部系统（External System）]-->>RD_RR[响应与处置层（Response & Remediation Layer）]: 10.返回处置结果（Remediation Result）
+    RD_RR[响应与处置层（Response & Remediation Layer）]->>EF_EL[演进与反馈层（Evolution & Feedback Layer）]: 11.上报处置结果（Report Remediation Result）
+    EF_EL[演进与反馈层（Evolution & Feedback Layer）]->>EF_EL[演进与反馈层（Evolution & Feedback Layer）]: 12.更新知识图谱/反馈学习（Update KG/Feedback Learning）
+    EF_EL[演进与反馈层（Evolution & Feedback Layer）]->>AI_AD[AI分析与决策层（AI Analysis & Decision Layer）]: 13.模型/策略迭代优化（Model/Policy Optimization）
+    RD_RR[响应与处置层（Response & Remediation Layer）]->>UM_MP[展现与管理层（UI & Management Layer）]: 14.生成告警/通知（Generate Alert/Notification）
+    UM_MP[展现与管理层（UI & Management Layer）]->>ES_OT[外部系统（External System）]: 15.（通知）安全运营团队（Notify SOC Team）
 ```
 
 **时序图解读（Sequence Diagram Interpretation）**：
